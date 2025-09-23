@@ -5,6 +5,10 @@ jobs:
     runs-on: ubuntu-latest  # Máquina virtual gratis de GitHub
     steps:
       - uses: actions/checkout@v4  # Baja tu código
+      - name: Setup Node.js  # ¡NUEVO! Instala el motor para js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20  # Versión simple
       - name: Prueba básica
         run: |
           node hola-cyber.js  # Corre tu programa
