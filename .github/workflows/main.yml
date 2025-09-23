@@ -1,0 +1,13 @@
+name: Mi Primer CI/CD Seguro
+on: [push]  # Se activa cuando subes cambios
+jobs:
+  check:
+    runs-on: ubuntu-latest  # Máquina virtual gratis de GitHub
+    steps:
+      - uses: actions/checkout@v4  # Baja tu código
+      - name: Prueba básica
+        run: |
+          node hola-cyber.js  # Corre tu programa
+          echo "¡Todo OK! No hay errores."
+
+          version 1 CI
