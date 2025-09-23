@@ -9,5 +9,3 @@ jobs:
         run: |
           node hola-cyber.js  # Corre tu programa
           echo "¡Todo OK! No hay errores."
-
-          version 1 CI
