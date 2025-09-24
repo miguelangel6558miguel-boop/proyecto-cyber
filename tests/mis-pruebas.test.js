@@ -1,5 +1,4 @@
-const { test, expect } = require('@jest/globals');  // ¡NUEVO! Esto hace que test y expect funcionen
-const { scanSeguro } = require('../hola-cyber.js');  // El import anterior
+const { scanSeguro } = require('../hola-cyber.js');
 
 // Unit test: Prueba la función sola
 test('scanSeguro agrega "es seguro" correctamente', () => {
