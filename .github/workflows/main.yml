@@ -1,15 +1,19 @@
-name: Mi Primer CI/CD Seguro
+name: Mi Primer CI/CD Seguro con Tests
 on: [push]  # Se activa cuando subes cambios
 jobs:
   check:
-    runs-on: ubuntu-latest  # Máquina virtual gratis de GitHub
+    runs-on: ubuntu-latest  # Máquina virtual gratis
     steps:
       - uses: actions/checkout@v4  # Baja tu código
-      - name: Setup Node.js  # ¡NUEVO! Instala el motor para js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20  # Versión simple
-      - name: Prueba básica
+          node-version: 20
+      - name: Instala dependencias (incluye Jest)
+        run: npm install
+      - name: Corre las pruebas (¡Aquí Jest!)
+        run: npm test
+      - name: Prueba básica (después de tests)
         run: |
-          node hola-cyber.js  # Corre tu programa
-          echo "¡Todo OK! No hay errores."
+          node hola-cyber.js
+          echo "¡Todo OK! Tests pasaron."
