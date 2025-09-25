@@ -1,4 +1,4 @@
 module.exports = {
-  testEnvironment: 'node',  // Modo para código Node.js simple
-  injectGlobals: true       // ¡Activa! Usa test y expect sin imports
+  testEnvironment: 'node',  // Sigue igual
+  injectGlobals: false      // ¡CAMBIO! Desactiva automáticos, para forzar import
 };
