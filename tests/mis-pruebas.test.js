@@ -1,3 +1,4 @@
+const { test, expect } = require('@jest/globals');  // ¡NUEVO! Import manual
 const { scanSeguro } = require('../hola-cyber.js');
 
 // Unit test: Prueba la función sola
